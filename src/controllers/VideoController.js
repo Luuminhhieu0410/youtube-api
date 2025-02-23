@@ -39,9 +39,9 @@ const addVideo = async (req, res, next) => {
             return res.status(400).json({ message: 'Đừng nhập linh tinh , web bug không fix được' });
         }
         const check = allVideodata.findIndex((elements) => elements.videoId == videoId )
-        allVideodata.forEach(element => {
-            console.log('phan tu ' + element.videoId);
-        });
+        // allVideodata.forEach(element => {
+        //     console.log('phan tu ' + element.videoId);
+        // });
         console.log('video id : ' + videoId)
         if (check >  0) {
             console.log('check : ' + check);
@@ -69,8 +69,8 @@ const addVideo = async (req, res, next) => {
             return res.status(404).json({ message: 'Không tìm thấy video trên YouTube' });
         }
 
-        // const videoTitle = dataAPI.items[0].snippet.title;
-        // console.log('Tiêu đề video:', videoTitle);
+        const videoTitle = dataAPI.items[0].snippet.title;
+        console.log('Tiêu đề video:', videoTitle);
 
 
         const newData = {
