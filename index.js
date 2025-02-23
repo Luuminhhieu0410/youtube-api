@@ -5,6 +5,7 @@ const path = require('path')
 const videoRoute = require('./src/routes/VideoRoute');
 const port = 4444;
 const notfound = require('./src/services/NotFound');
+app.set('trust proxy', 1);
 app.use(express.static(path.join(__dirname,'src','public')));
 app.use(express.json());
 
@@ -15,5 +16,3 @@ app.listen(port,(err)=>{
     if(err) console.log(err);
     else console.log(`server is running on http://localhost:${port}`);
 })
-
-    
