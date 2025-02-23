@@ -1,8 +1,9 @@
 var fs = require('fs');
 var path = require('path');
+var dataPath = path.join(__dirname, '../../data.json');
 const getVideoData = () =>{
     return new Promise((resolve,reject) =>{
-        const data = fs.readFile(('data.json'),(err,data) =>{
+        const data = fs.readFile(dataPath,(err,data) =>{
             if(!err) resolve(data.toString());
             else reject(err);
         })
@@ -19,7 +20,7 @@ const addVideoData = (videoObject) =>{
         console.log("sau khi them" + convertData.data[1].title);
         
         return new Promise((resolve,reject) =>{
-            fs.writeFile('data.json',JSON.stringify(convertData),(err) =>{
+            fs.writeFile(dataPath,JSON.stringify(convertData),(err) =>{
               if(!err )resolve('thanh cong');
               else reject(err);
             })
