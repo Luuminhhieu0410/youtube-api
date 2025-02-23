@@ -14,17 +14,6 @@ const apiKey = "AIzaSyDbZlaKeF7eXiKJqoNeWvgS0J6ocYgqrAc";
 var videoId = '';
 var linkUrl = '';
 
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.items.length > 0) {
-//       console.log("Tiêu đề video:", data.items[0].snippet.title);
-//     } else {
-//       console.log("Không tìm thấy video!");
-//     }
-//   })
-//   .catch(error => console.error("Lỗi:", error));
-
 
 const addVideo = async (req, res, next) => {
     try {
