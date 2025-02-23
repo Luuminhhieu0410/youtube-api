@@ -3,7 +3,7 @@ const { getVideoData, addVideoData } = require('../models/VideoModel');
 const getAllVideo = async (req, res, next) => {
     try {
         var allVideodata = await getVideoData();
-        return res.json(JSON.parse(allVideodata));
+        return res.json(allVideodata);
     } catch (error) {
         console.log(error);
         next();
@@ -21,7 +21,6 @@ const addVideo = async (req, res, next) => {
         console.log('Link nhận được:', linkYoutube);
 
         var allVideodata = await getVideoData();
-        allVideodata = JSON.parse(allVideodata);
         allVideodata = allVideodata.data;
 
         var videoId = '';

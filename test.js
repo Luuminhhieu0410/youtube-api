@@ -1,4 +1,5 @@
-const db = require('../dbconnection/db');
+const db = require('./src/dbconnection/db');
+
 
 const getVideoData = async () => {
     try {
@@ -13,6 +14,7 @@ const getVideoData = async () => {
     }
 };
 
+
 const addVideoData = async (videoObject) => {
     try {
         const { title, videoId, thumbnail } = videoObject;
@@ -26,5 +28,5 @@ const addVideoData = async (videoObject) => {
         throw error;
     }
 };
-
+getVideoData().then((data) => console.log(data));
 module.exports = { getVideoData, addVideoData };
