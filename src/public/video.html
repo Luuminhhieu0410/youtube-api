@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="https://www.youtube.com/iframe_api" async defer></script>
+    
+    <link rel="stylesheet" href="./video.css">
+</head>
+<body>
+    <div class="container-add" >
+        <div style="margin-bottom: 10px;" >Xin chào , <span id="ten"></span> - <a href="/user/logout"> Đăng Xuất</a> </div>
+        <form id="form-post">
+            <input type="text" placeholder="Link YouTube" id="input-link">
+            <button type="submit" id="submit"><img src="./images/add.png" alt=""></button>
+        </form>
+    
+    </div>
+    <div class="container-body">
+        <div id="big-vd" style="max-height: 350px;">
+            <div id="player" > 
+            </div>
+        </div>        
+        <div class="container-list-vd"> 
+        </div>
+    </div>
+    <!-- <script src="postlink.js"></script> -->
+     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./video.js"></script>
+
+</body>
+</html>
